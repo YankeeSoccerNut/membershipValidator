@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+// a bit of overkill but helps reinforce MVC approach
 var memberships = require('./routes/memberships');
 
 var app = express();
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+// a bit of overkill but helps reinforce MVC approach
 app.use('/memberships', memberships);
 
 // catch 404 and forward to error handler
