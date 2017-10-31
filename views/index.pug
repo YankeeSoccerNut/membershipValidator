@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  // register form
+  
+  form(method='POST' action='memberships' class='col-sm-6')
+    div This side uses POST
+    div.form-group
+      label(for='fname') First Name:
+      input#fname.form-control(type='text', placeholder='First Name' name='fname')
+    div.form-group
+      label(for='lname') Last Name:
+      input#lname.form-control(type='text', placeholder='Last Name' name='lname')
+    button.btn.btn-primary(type='submit') Validate
+
+  form(method='GET' action='memberships' class='col-sm-6')
+    div This side uses GET
+    div.form-group
+      label(for='fname') First Name:
+      input#fname.form-control(type='text', placeholder='First Name' name='fname')
+    div.form-group
+      label(for='lname') Last Name:
+      input#lname.form-control(type='text', placeholder='Last Name' name='lname')
+    button.btn.btn-primary(type='submit') Validate
